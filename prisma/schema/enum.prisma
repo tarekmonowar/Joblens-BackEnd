@@ -1,0 +1,59 @@
+// Shared enums used across Joblens models.
+enum Role {
+  USER
+  ADMIN
+}
+
+enum JobType {
+  FULL_TIME
+  PART_TIME
+  CONTRACT
+  INTERNSHIP
+}
+
+enum LocationType {
+  REMOTE
+  ONSITE
+  HYBRID
+}
+
+enum JobSource {
+  LINKEDIN
+  INDEED
+  GLASSDOOR
+  BDJOBS
+  OTHER
+}
+
+enum JobCategory {
+  FULLSTACK
+  BACKEND
+  FRONTEND
+  SOFTWARE_ENGINEER
+  MOBILE
+  DEVOPS
+  QA
+  OTHER
+}
+
+enum SalaryCurrency {
+  BDT
+  USD
+}
+
+enum AlertFrequency {
+  INSTANT
+  DAILY
+  WEEKLY
+}
+
+enum FetchStatus {
+  RUNNING
+  SUCCESS
+  FAILED
+}
+
+enum TokenType {
+  EMAIL_VERIFY
+  PASSWORD_RESET
+}

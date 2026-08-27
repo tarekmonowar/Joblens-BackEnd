@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>Daily digest</title></head>
+<body style="font-family:sans-serif;max-width:560px;margin:0 auto;padding:24px;">
+  <h2>Your daily job digest</h2>
+  <p>{{jobs.length}} job(s) matched your alerts today.</p>
+  <ul>
+    {{#each jobs}}
+    <li style="margin-bottom:12px;">
+      <strong>{{title}}</strong> at {{company}} — {{location}}<br>
+      <a href="{{sourceUrl}}">View job</a>
+    </li>
+    {{/each}}
+  </ul>
+  <p><a href="{{manageUrl}}">Manage alerts</a></p>
+</body>
+</html>

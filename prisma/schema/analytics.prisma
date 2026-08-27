@@ -1,0 +1,32 @@
+// Daily analytics snapshots and ingestion fetch logs.
+model Analytics {
+  id                String   @id @default(cuid())
+  date              DateTime @unique
+  totalJobs         Int
+  newJobs           Int
+  topSkills         Json
+  topCompanies      Json
+  topLocations      Json
+  salaryStats       Json
+  jobTypeBreakdown  Json
+  categoryBreakdown Json
+  demandIndex       Float
+  createdAt         DateTime @default(now())
+
+  @@index([date])
+}
+
+model FetchLog {
+  id            String      @id @default(cuid())
+  source        JobSource
+  status        FetchStatus
+  jobsFetched   Int         @default(0)
+  jobsNew       Int         @default(0)
+  jobsDuplicate Int         @default(0)
+  errors        String[]
+  startedAt     DateTime    @default(now())
+  finishedAt    DateTime?
+  durationMs    Int?
+
+  @@index([source, startedAt])
+}

@@ -1,0 +1,50 @@
+// Normalized developer job postings (deduped by fingerprint).
+model Job {
+  id                  String          @id @default(cuid())
+  fingerprint         String          @unique
+  title               String
+  company             String
+  companyLogo         String?
+  companyWebsite      String?
+  companyLinkedIn     String?
+  location            String
+  locationType        LocationType    @default(ONSITE)
+  isBangladesh        Boolean         @default(false)
+  jobType             JobType         @default(FULL_TIME)
+  category            JobCategory     @default(OTHER)
+  skills              String[]
+  salaryMin           Int?
+  salaryMax           Int?
+  salaryCurrency      SalaryCurrency?
+  salaryNegotiable    Boolean         @default(false)
+  experienceMin       Int?
+  experienceMax       Int?
+  description         String          @db.Text
+  requirements        String[]
+  benefits            String[]
+  applicationDeadline DateTime?
+  postedAt            DateTime
+  source              JobSource
+  sourceName          String?
+  sourceUrl           String
+  isActive            Boolean         @default(true)
+  viewCount           Int             @default(0)
+  fetchCount          Int             @default(1)
+  lastSeenAt          DateTime        @default(now())
+  scrapedAt           DateTime        @default(now())
+  updatedAt           DateTime        @updatedAt
+
+  savedBy      SavedJob[]
+  applications Application[]
+
+  @@index([isActive, postedAt])
+  @@index([category])
+  @@index([jobType])
+  @@index([locationType])
+  @@index([isBangladesh])
+  @@index([lastSeenAt])
+  @@index([source])
+  @@index([company])
+  @@index([viewCount])
+  @@index([skills])
+}

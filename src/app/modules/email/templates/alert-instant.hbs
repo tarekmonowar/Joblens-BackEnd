@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>Job alert</title></head>
+<body style="font-family:sans-serif;max-width:560px;margin:0 auto;padding:24px;">
+  <h2>New jobs matching your alert</h2>
+  {{#if alert.keywords}}<p>Keywords: {{#each alert.keywords}}{{this}}{{#unless @last}}, {{/unless}}{{/each}}</p>{{/if}}
+  <ul>
+    {{#each jobs}}
+    <li style="margin-bottom:12px;">
+      <strong>{{title}}</strong> at {{company}} — {{location}}<br>
+      <a href="{{sourceUrl}}">View &amp; Apply</a>
+    </li>
+    {{/each}}
+  </ul>
+  <p><a href="{{manageUrl}}">Manage your alerts</a></p>
+</body>
+</html>

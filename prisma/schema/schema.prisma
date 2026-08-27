@@ -1,0 +1,9 @@
+// Root Prisma config: Postgres datasource + client generator (multi-file schema folder).
+generator client {
+  provider = "prisma-client-js"
+  output   = "../../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}

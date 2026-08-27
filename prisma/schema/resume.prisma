@@ -1,0 +1,11 @@
+// Uploaded resume — one per user, stored as plain text for AI customization.
+model Resume {
+  id        String   @id @default(cuid())
+  userId    String   @unique
+  fileName  String
+  content   String // extracted plain text of the uploaded resume file
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+}
