@@ -4,6 +4,7 @@
   "main": "server.js",
   "scripts": {
     "build": "tsc",
+    "prebuild": "prisma generate",
     "start": "node ./dist/server.js",
     "dev": "tsx watch ./src/server.ts",
     "prisma:generate": "prisma generate",
