@@ -21,13 +21,13 @@ jobs:
       - name: Set up Node.js version
         uses: actions/setup-node@v3
         with:
-          node-version: '22.x'
+          node-version: "22.x"
 
       - name: npm install, build, and test
         run: |
           npm install
+          npx prisma generate
           npm run build --if-present
-          
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
@@ -47,19 +47,25 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: node-app
-      
+
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_6294ED51259945CEAE26769E4753BFD7 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_6651A9C9B1CA4329894E0397D1C929A9 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_BE407DB71E95449FAEEA9703BEAAF9D2 }}
+          client-id:
+            ${{
+            secrets.AZUREAPPSERVICE_CLIENTID_6294ED51259945CEAE26769E4753BFD7 }}
+          tenant-id:
+            ${{
+            secrets.AZUREAPPSERVICE_TENANTID_6651A9C9B1CA4329894E0397D1C929A9 }}
+          subscription-id:
+            ${{
+            secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_BE407DB71E95449FAEEA9703BEAAF9D2
+            }}
 
-      - name: 'Deploy to Azure Web App'
+      - name: "Deploy to Azure Web App"
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'jobicy-backend'
-          slot-name: 'Production'
+          app-name: "jobicy-backend"
+          slot-name: "Production"
           package: .
-          
