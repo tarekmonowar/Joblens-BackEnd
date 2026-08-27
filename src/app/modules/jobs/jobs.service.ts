@@ -4,7 +4,7 @@ import {
   JobCategory,
   LocationType,
   Prisma,
-} from "../../../generated/prisma";
+} from "@prisma/client";
 import { prisma } from "../../config/prisma";
 import { RedisServices, TTL } from "../../config/redis";
 import { appError } from "../../error/errorCodes";

@@ -8,7 +8,7 @@ import { configService } from '../../../config/appConfig';
 // plan's file name + JobSourceAdapter contract stable, this adapter is still named
 // JsearchAdapter but talks to the subscribed LinkedIn API. It shares its schema +
 // normalizer with the active-jobs-db adapter (both are "Fantastic Jobs" feeds).
-import { JobSource } from '../../../../generated/prisma';
+import { JobSource } from "@prisma/client";
 import {
   FetchQuery,
   JobSourceAdapter,

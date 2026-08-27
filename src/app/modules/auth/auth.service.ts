@@ -1,6 +1,6 @@
 import { randomBytes } from "crypto";
 import bcrypt from "bcrypt";
-import { TokenType } from "../../../generated/prisma";
+import { TokenType } from "@prisma/client";
 import { prisma } from "../../config/prisma";
 import { envVars } from "../../config/env";
 import { appError } from "../../error/errorCodes";

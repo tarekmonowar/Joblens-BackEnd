@@ -1,4 +1,4 @@
-import { JobCategory } from "../../generated/prisma";
+import { JobCategory } from "@prisma/client";
 
 export const SKILL_MAP: Record<string, string> = {
   reactjs: "React",

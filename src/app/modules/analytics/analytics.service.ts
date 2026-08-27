@@ -1,4 +1,4 @@
-import { JobSource, SalaryCurrency } from "../../../generated/prisma";
+import { JobSource, SalaryCurrency } from "@prisma/client";
 import { prisma } from "../../config/prisma";
 import { RedisServices, TTL } from "../../config/redis";
 import { listableJobsWhere } from "../../utils/jobList";

@@ -1,5 +1,5 @@
 import { JwtPayload } from "jsonwebtoken";
-import { Role } from "../../generated/prisma";
+import { Role } from "@prisma/client";
 
 declare global {
   namespace Express {

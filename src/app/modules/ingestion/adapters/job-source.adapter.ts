@@ -6,7 +6,7 @@ import {
   JobType,
   LocationType,
   SalaryCurrency,
-} from '../../../../generated/prisma';
+} from "@prisma/client";
 
 /** Injection token for the list of registered source adapters. */
 export const JOB_SOURCE_ADAPTERS = 'JOB_SOURCE_ADAPTERS';

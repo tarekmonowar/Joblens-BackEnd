@@ -4,7 +4,7 @@ import {
   JobSource,
   JobType,
   LocationType,
-} from "../../../generated/prisma";
+} from "@prisma/client";
 import { classifyCategory } from "../../utils/normalize";
 import {
   extractBenefitsFromDescription,

@@ -3,7 +3,7 @@ import {
   AlertFrequency,
   JobType,
   LocationType,
-} from "../../../generated/prisma";
+} from "@prisma/client";
 
 export const createAlertZodSchema = z.object({
   keywords: z.array(z.string()),

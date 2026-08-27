@@ -1,4 +1,4 @@
-import { JobCategory, Prisma } from "../../generated/prisma";
+import { JobCategory, Prisma } from "@prisma/client";
 
 export const LISTABLE_JOB_CATEGORIES: readonly JobCategory[] = [
   JobCategory.FULLSTACK,

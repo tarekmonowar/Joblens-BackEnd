@@ -1,4 +1,4 @@
-import { FetchStatus, Job, LocationType } from "../../../generated/prisma";
+import { FetchStatus, Job, LocationType } from "@prisma/client";
 import { prisma } from "../../config/prisma";
 import { RedisServices } from "../../config/redis";
 import { listableJobsWhere } from "../../utils/jobList";

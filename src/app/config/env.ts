@@ -1,6 +1,7 @@
 import dotenv from "dotenv";
+import { resolve } from "path";
 
-dotenv.config();
+dotenv.config({ path: resolve(__dirname, "../../../.env") });
 
 interface EnvConfig {
   NODE_ENV: "development" | "production" | "test";

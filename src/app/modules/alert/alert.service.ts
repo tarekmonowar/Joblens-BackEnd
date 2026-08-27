@@ -3,7 +3,7 @@ import {
   AlertFrequency,
   Job,
   Prisma,
-} from "../../../generated/prisma";
+} from "@prisma/client";
 import { prisma } from "../../config/prisma";
 import { appError } from "../../error/errorCodes";
 import { normalizeSkill } from "../../utils/normalize";

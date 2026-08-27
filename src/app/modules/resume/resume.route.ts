@@ -1,6 +1,6 @@
 import multer from "multer";
 import { Router } from "express";
-import { Role } from "../../../generated/prisma";
+import { Role } from "@prisma/client";
 import { checkAuth } from "../../middleware/checkAuth";
 import { catchAsync } from "../../utils/catchAsync";
 import { sendResponse } from "../../utils/sendResponse";

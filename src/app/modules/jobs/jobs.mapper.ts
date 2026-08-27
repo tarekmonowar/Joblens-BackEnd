@@ -1,4 +1,4 @@
-import { Job } from "../../../generated/prisma";
+import { Job } from "@prisma/client";
 
 export interface IJobCard {
   id: string;

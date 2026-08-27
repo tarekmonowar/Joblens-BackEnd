@@ -6,7 +6,7 @@ import {
   JobType,
   LocationType,
   SalaryCurrency,
-} from '../../../../generated/prisma';
+} from "@prisma/client";
 import { fingerprint as computeFingerprint } from '../../../utils/fingerprint';
 import {
   classifyCategory,

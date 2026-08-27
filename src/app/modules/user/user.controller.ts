@@ -1,5 +1,5 @@
 import { StatusCodes } from "http-status-codes";
-import { Role } from "../../../generated/prisma";
+import { Role } from "@prisma/client";
 import { catchAsync } from "../../utils/catchAsync";
 import { sendResponse } from "../../utils/sendResponse";
 import { UserServices } from "./user.service";

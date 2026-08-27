@@ -1,5 +1,5 @@
 import bcrypt from "bcrypt";
-import { Role } from "../../../generated/prisma";
+import { Role } from "@prisma/client";
 import { envVars } from "../../config/env";
 import { prisma } from "../../config/prisma";
 

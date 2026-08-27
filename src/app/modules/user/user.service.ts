@@ -1,4 +1,4 @@
-import { Job, JobCategory, Prisma } from "../../../generated/prisma";
+import { Job, JobCategory, Prisma } from "@prisma/client";
 import { prisma } from "../../config/prisma";
 import { appError } from "../../error/errorCodes";
 import { listableJobsWhere } from "../../utils/jobList";

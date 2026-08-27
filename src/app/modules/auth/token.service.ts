@@ -1,4 +1,4 @@
-import { User } from "../../../generated/prisma";
+import { User } from "@prisma/client";
 import { prisma } from "../../config/prisma";
 import { envVars } from "../../config/env";
 import { appError } from "../../error/errorCodes";

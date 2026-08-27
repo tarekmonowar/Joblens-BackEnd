@@ -1,5 +1,5 @@
 import { Queue, Worker } from "bullmq";
-import { AlertFrequency } from "../../../generated/prisma";
+import { AlertFrequency } from "@prisma/client";
 import { prisma } from "../../config/prisma";
 import { RedisServices } from "../../config/redis";
 import { bullmqDefaultOptions } from "../../config/bullmq";

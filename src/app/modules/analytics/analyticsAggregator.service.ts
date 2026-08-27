@@ -4,7 +4,7 @@ import {
   LocationType,
   Prisma,
   SalaryCurrency,
-} from "../../../generated/prisma";
+} from "@prisma/client";
 import { prisma } from "../../config/prisma";
 import { RedisServices } from "../../config/redis";
 import { Logger } from "../../utils/logger";

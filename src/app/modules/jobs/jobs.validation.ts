@@ -4,7 +4,7 @@ import {
   JobSource,
   JobType,
   LocationType,
-} from "../../../generated/prisma";
+} from "@prisma/client";
 
 const csv = (value: unknown) => {
   if (value === undefined || value === null || value === "") {

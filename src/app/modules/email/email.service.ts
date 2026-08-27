@@ -31,7 +31,11 @@ class EmailService {
       "alert-weekly",
     ];
     for (const name of names) {
-      const filePath = join(__dirname, "templates", `${name}.hbs`);
+      const filePath = join(
+        process.cwd(),
+        "src/app/modules/email/templates",
+        `${name}.hbs`,
+      );
       this.templates.set(name, Handlebars.compile(readFileSync(filePath, "utf-8")));
     }
   }

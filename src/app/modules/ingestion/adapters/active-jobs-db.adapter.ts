@@ -5,7 +5,7 @@ import { configService } from '../../../config/appConfig';
 // Aggregates postings from many ATS providers and returns the same schema as the
 // LinkedIn feed (the "Fantastic Jobs" family), so it reuses the shared normalizer.
 // Endpoint /active-ats accepts: title, location, time_frame (1h|24h|7d|6m), limit, offset.
-import { JobSource } from '../../../../generated/prisma';
+import { JobSource } from "@prisma/client";
 import {
   FetchQuery,
   JobSourceAdapter,

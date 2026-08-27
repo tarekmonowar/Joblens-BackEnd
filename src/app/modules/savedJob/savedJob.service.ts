@@ -1,4 +1,4 @@
-import { Prisma } from "../../../generated/prisma";
+import { Prisma } from "@prisma/client";
 import { prisma } from "../../config/prisma";
 import { appError } from "../../error/errorCodes";
 import { toJobCardDto } from "../jobs/jobs.mapper";

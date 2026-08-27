@@ -4,7 +4,7 @@ import { configService } from '../../../config/appConfig';
 //
 // Returns global remote postings with rich HTML descriptions, skills, and an
 // embedded company object (requested via include_company=true). Paginated by cursor.
-import { JobSource, JobType, LocationType } from '../../../../generated/prisma';
+import { JobSource, JobType, LocationType } from "@prisma/client";
 import { fingerprint as computeFingerprint } from '../../../utils/fingerprint';
 import {
   classifyCategory,
