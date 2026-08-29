@@ -7,7 +7,7 @@
     "prebuild": "prisma generate",
     "postinstall": "prisma generate",
     "start": "node ./dist/server.js",
-    "start:prod": "prisma generate && node ./dist/server.js",
+    "start:prod": "node ./dist/server.js",
     "dev": "tsx watch ./src/server.ts",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
