@@ -22,7 +22,7 @@ const chat = async (messages: IMessage[]) => {
       "Authorization": `Bearer ${ai.apiKey}`,
     },
     body: JSON.stringify({
-      model: ai.deployment,
+      model: ai.chat,
       messages: [
         {
           role: "system",

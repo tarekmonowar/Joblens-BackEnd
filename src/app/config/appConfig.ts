@@ -19,6 +19,7 @@ export const appConfig = {
     endpoint: envVars.AZURE_OPENAI_ENDPOINT,
     apiKey: envVars.AZURE_OPENAI_API_KEY,
     deployment: envVars.AZURE_OPENAI_DEPLOYMENT,
+    chat: envVars.AZURE_OPENAI_CHATMODEL,
   },
 };
 

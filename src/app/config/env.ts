@@ -51,6 +51,7 @@ interface EnvConfig {
   AZURE_OPENAI_ENDPOINT: string;
   AZURE_OPENAI_API_KEY: string;
   AZURE_OPENAI_DEPLOYMENT: string;
+  AZURE_OPENAI_CHATMODEL: string;
 }
 
 const requiredKeys = [
@@ -95,8 +96,7 @@ const loadEnvVariables = (): EnvConfig => {
       "lax") as EnvConfig["COOKIE_SAMESITE"],
     COOKIE_DOMAIN: process.env.COOKIE_DOMAIN || undefined,
     JSEARCH_API_KEY: process.env.JSEARCH_API_KEY as string,
-    JSEARCH_API_HOST:
-      process.env.JSEARCH_API_HOST ?? "jsearch.p.rapidapi.com",
+    JSEARCH_API_HOST: process.env.JSEARCH_API_HOST ?? "jsearch.p.rapidapi.com",
     JSEARCH_QUERY:
       process.env.JSEARCH_QUERY ??
       "fullstack OR backend OR frontend OR software developer OR engineer in bangladesh",
@@ -127,6 +127,7 @@ const loadEnvVariables = (): EnvConfig => {
     AZURE_OPENAI_ENDPOINT: process.env.AZURE_OPENAI_ENDPOINT ?? "",
     AZURE_OPENAI_API_KEY: process.env.AZURE_OPENAI_API_KEY ?? "",
     AZURE_OPENAI_DEPLOYMENT: process.env.AZURE_OPENAI_DEPLOYMENT ?? "",
+    AZURE_OPENAI_CHATMODEL: process.env.AZURE_OPENAI_CHATMODEL ?? "",
   };
 };
 

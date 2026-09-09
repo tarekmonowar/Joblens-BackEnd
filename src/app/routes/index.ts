@@ -8,6 +8,7 @@ import { JobsRoutes } from "../modules/jobs/jobs.route";
 import { SavedJobRoutes } from "../modules/savedJob/savedJob.route";
 import { UserRoutes } from "../modules/user/user.route";
 import { ResumeRoutes } from "../modules/resume/resume.route";
+import { ChatbotRoutes } from "../modules/chatbot/chatbot.route";
 
 export const router = Router();
 
@@ -21,6 +22,7 @@ const moduleRoutes = [
   { path: "/analytics", route: AnalyticsRoutes },
   { path: "/admin", route: AdminRoutes },
   { path: "/resume", route: ResumeRoutes },
+  { path: "/chat", route: ChatbotRoutes },
 ];
 
 moduleRoutes.forEach((item) => {
